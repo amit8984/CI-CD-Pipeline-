@@ -6,7 +6,7 @@ pipeline {
           
          steps {
             bat 'snowsql -c myconnection --config C:\\Users\\91827\\.snowsql\\config -f Build\\GetItemMasterSupplyChain_Target_DDL.sql'
-            bat 'snowsql -c myconnection --config C:\\Users\\91827\\.snowsql\\config -f Build\\ItemMasterSupplyChain_Buyer.sql'
+            bat 'snowsql -c myconnection --config C:\\Users\\91827\\.snowsql\\config -f Build\\ItemMasterSuppychain_Buyer.sql'
             bat 'snowsql -c myconnection --config C:\\Users\\91827\\.snowsql\\config -f Build\\sp_GetItemMasterSupplyChain_To_BIM_load.sql'
 
          }
