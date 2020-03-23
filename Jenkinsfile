@@ -16,8 +16,9 @@ pipeline {
       stage('Test Stage') {
           
          steps {
-            bat 'snowsql -c myconnection --config C:\\Users\\91827\\.snowsql\\config -f test\\counting_records.sql'
             bat 'snowsql -c myconnection --config C:\\Users\\91827\\.snowsql\\config -f test\\Checking records.sql'
+            bat 'snowsql -c myconnection --config C:\\Users\\91827\\.snowsql\\config -f test\\counting_records.sql'
+            
          }
          
       }
