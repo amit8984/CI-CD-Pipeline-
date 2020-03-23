@@ -17,11 +17,15 @@ pipeline {
           
          steps {
             bat 'snowsql -c myconnection --config C:\\Users\\91827\\.snowsql\\config -f test\\Checking_records.sql'
-            bat 'snowsql -c myconnection --config C:\\Users\\91827\\.snowsql\\config -f test\\counting_records.sql'
+            bat 'snowsql -c myconnection --config C:\\Users\\91827\\.snowsql\\config -f test\\countingrecords.sql'
             
          }
          
       }
       
    }
+   post {
+        always {
+            emailext body: 'A Test EMail', recipientProviders: [[$class: 'DevelopersRecipientProvider'], [$class: 'RequesterRecipientProvider']], subject: 'Test'
+        }
 }
