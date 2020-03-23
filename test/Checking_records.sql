@@ -4,7 +4,7 @@ use DATABASE EDM_CONFIRMED_DEV;
 use schema EDM_CONFIRMED_DEV.SCRATCH;
 
 select 
-    case when cnt1 = cnt2 then True else false end as count
+    case when cnt1 = cnt2 then True else false end as Result
     from 
     (
        select 
