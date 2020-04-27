@@ -7,9 +7,9 @@ create Stream GETITEMMASTERSUPPLYCHAIN_FLAT_R_STREAM_Test on table GETITEMMASTER
 
 Insert into  GETITEMMASTERSUPPLYCHAIN_FLAT_COPY select * from .GETITEMMASTERSUPPLYCHAIN_FLAT_WRK_TEMP2;
 
-create MasterSupplyChain_BIM_load_TASK_COPY
+create task  MasterSupplyChain_BIM_load_TASK_COPY
 warehouse = EDM_ADMIN_WH
-  schedule = '5 minutes'
+  schedule = '1 minute'
 WHEN SYSTEM$STREAM_HAS_DATA('GETITEMMASTERSUPPLYCHAIN_FLAT_R_STREAM_Test')
 AS
 CALL sp_GetItemMasterSupplyChain_To_BIM_load_COPY();
