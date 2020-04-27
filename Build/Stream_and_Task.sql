@@ -16,4 +16,4 @@ AS
 CALL sp_GetItemMasterSupplyChain_To_BIM_load_COPY();
 
 
-alter MasterSupplyChain_BIM_load_TASK_COPY resume;
+alter task MasterSupplyChain_BIM_load_TASK_COPY resume;
