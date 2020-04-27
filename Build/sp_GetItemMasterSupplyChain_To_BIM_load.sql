@@ -16,9 +16,10 @@ CREATE OR REPLACE PROCEDURE sp_GetItemMasterSupplyChain_To_BIM_load_COPY()
     var cnf_schema = "SCRATCH";
     var ref_db = "EDM_REFINED_DEV";
     var ref_schema = "DW_R_PRODUCT";
-	var src_tbl = ref_db + "." + ref_schema + ".GetItemMasterSupplyChain_FLAT";
-	var src_wrk_tbl = ref_db + "." + ref_schema + ".GetItemMasterSupplyChain_FLAT_wrk";
-	var src_rerun_tbl = ref_db + "." + ref_schema + ".GetItemMasterSupplyChain_FLAT_Rerun";
+	
+	var src_wrk_tbl = ref_db + "." + ref_schema + ".GetItemMasterSupplyChain_FLAT_wrk_Test";
+	var src_tbl = ref_db + "." + ref_schema + ".GETITEMMASTERSUPPLYCHAIN_FLAT_R_STREAM_Test";
+	var src_rerun_tbl = cnf_db + "." + wrk_schema + ".GETITEMMASTERSUPPLYCHAIN_Flat_Rerun_Test";
 	
 	// check if rerun queue table exists otherwise create it
 	var sql_crt_rerun_tbl = `CREATE TABLE IF NOT EXISTS `+ src_rerun_tbl +` DATA_RETENTION_TIME_IN_DAYS = 0 AS SELECT * FROM `+ src_tbl +` where 1=2 `;
