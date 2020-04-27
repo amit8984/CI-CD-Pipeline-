@@ -95,4 +95,4 @@ CREATE OR REPLACE PROCEDURE sp_GetItemMasterSupplyChain_To_BIM_load_COPY()
 	$$;
 	
 	
-call sp_GetItemMasterSupplyChain_To_BIM_load_COPY();
+
