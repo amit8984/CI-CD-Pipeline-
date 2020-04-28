@@ -1,17 +1,7 @@
-//***********************************
-// Choose warehouse,database and schema 
-//***********************************
-
-//selecting warehouse,database and schema
 use WAREHOUSE DEV_ENGINEER_WH;
 use DATABASE EDM_CONFIRMED_DEV;
 use schema EDM_CONFIRMED_DEV.SCRATCH;
 
-
-
-//***********************************
-// Create Target Tables 
-//***********************************
 CREATE OR REPLACE TABLE Buyer
 (
  Buyer_Id              VARCHAR  NOT NULL ,
