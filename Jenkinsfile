@@ -9,9 +9,7 @@ pipeline {
             bat 'snowsql -c myconnection --config C:\\Users\\91827\\.snowsql\\config -f Build\\ItemMasterSuppychain_Buyer.sql'
             bat 'snowsql -c myconnection --config C:\\Users\\91827\\.snowsql\\config -f Build\\sp_GetItemMasterSupplyChain_To_BIM_load.sql'
             bat 'snowsql -c myconnection --config C:\\Users\\91827\\.snowsql\\config -f Build\\Stream_and_Task.sql'
-            timeout(time: 1, unit: 'MINUTES') {
-                    bat '99'
-     
+            
          }
          
       }
