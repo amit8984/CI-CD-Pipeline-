@@ -1,14 +1,9 @@
 
-//***********************************
-// Choose warehouse,database and schema 
-//***********************************
-
-//selecting warehouse,database and schema
 use WAREHOUSE DEV_ENGINEER_WH;
 use DATABASE EDM_CONFIRMED_DEV;
 use schema EDM_CONFIRMED_DEV.SCRATCH;
 
- CREATE OR REPLACE PROCEDURE sp_GetItemMasterSupplyChain_To_BIM_load_Buyer(src_wrk_tbl varchar,cnf_db varchar,cnf_schema varchar,wrk_schema varchar)
+CREATE OR REPLACE PROCEDURE sp_GetItemMasterSupplyChain_To_BIM_load_Buyer(src_wrk_tbl varchar,cnf_db varchar,cnf_schema varchar,wrk_schema varchar)
      RETURNS STRING
     LANGUAGE JAVASCRIPT
     AS 
