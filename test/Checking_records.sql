@@ -8,7 +8,7 @@ select
     from 
     (
        select 
-        count(distinct(buyer_id)) as cnt1, count(distinct(buyer_id)) as cnt2
-            from Buyer,edm_refined_dev.dw_r_product.GetItemMasterSupplyChain_FLAT
+        count(distinct(buyer_id)) as cnt1, count(distinct(buyerid)) as cnt2
+            from Buyer,edm_refined_dev.dw_r_product.GetItemMasterSupplyChain_FLAT_wrk
       
     );
