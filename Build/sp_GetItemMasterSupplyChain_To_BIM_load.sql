@@ -18,7 +18,7 @@ CREATE OR REPLACE PROCEDURE sp_GetItemMasterSupplyChain_To_BIM_load_COPY()
     var ref_schema = "DW_R_PRODUCT";
 	
 	var src_wrk_tbl = ref_db + "." + ref_schema + ".GetItemMasterSupplyChain_FLAT_wrk";
-	var src_tbl = ref_db + "." + ref_schema + ".GETITEMMASTERSUPPLYCHAIN_FLAT_R_STREAM_Test";
+	var src_tbl = cnf_db + "." + SCRATCH + ".GETITEMMASTERSUPPLYCHAIN_FLAT_R_STREAM_Test";
 	var src_rerun_tbl = cnf_db + "." + wrk_schema + ".GETITEMMASTERSUPPLYCHAIN_Flat_Rerun";
 	
 	// check if rerun queue table exists otherwise create it
